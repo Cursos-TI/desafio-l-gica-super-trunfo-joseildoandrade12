@@ -98,38 +98,131 @@ int main()
         separador();
     }
 
-    if(cidade[0].populacao > cidade[1].populacao) printf("População: Carta 1 venceu \n");
-    else printf("População: Carta 2 venceu \n");
-    
-    if(cidade[0].numeroPontosTuristicos > cidade[1].numeroPontosTuristicos) printf("NumeroPontosTuristicos: Carta 1 venceu \n");
-    else printf("NumeroPontosTuristicos: Carta 2 venceu \n");
+    int opcao;
 
-    if(cidade[0].area > cidade[1].area) printf("Área: Carta 1 venceu \n");
-    else printf("Área: Carta 2 venceu \n");
-    
-    if(cidade[0].pib > cidade[1].pib) printf("PIB: Carta 1 venceu \n");
-    else printf("PIB: Carta 2 venceu \n");
-    
-    if(cidade[0].densidadePopulacional < cidade[1].densidadePopulacional) printf("DensidadePopulacional: Carta 1 venceu \n");
-    else printf("DensidadePopulacional: Carta 2 venceu \n");
-
-    if(cidade[0].pibPerCapita > cidade[1].pibPerCapita) printf("PibPerCapita: Carta 1 venceu \n");
-    else printf("PibPerCapita: Carta 2 venceu \n");
-    
-    if(cidade[0].superPoder > cidade[1].superPoder) printf("SuperPoder: Carta 1 venceu \n");
-    else printf("SuperPoder: Carta 2 venceu \n");
+    printf("Escolha uma valor para comparar as cartas: \n");
+    printf("1 - População \n");
+    printf("2 - Área \n");
+    printf("3 - PIB \n");
+    printf("4 - NumeroDePontosTuristicos \n");
+    printf("5 - DensidadePopulacional \n");
+    printf("6 - PibPerCapita \n");
+    printf("7 - SuperPoder \n");
+    printf("Opção escolhida: \n");
+    scanf("%d", &opcao);
     
     separador();
-    
-    printf("Comparação de cartas (Atributo: População)\n");
-    printf("Carta 1 - %s : %lf \n", cidade[0].nomeCidade, cidade[0].populacao);
-    printf("Carta 2 - %s : %lf \n", cidade[1].nomeCidade, cidade[1].populacao);
 
-    if(cidade[0].populacao > cidade[1].populacao){
-        printf("Resultado: carta 1 %s venceu \n", cidade[0].nomeCidade);
-    } else {
-        printf("Resultado: carta 2 %s venceu \n", cidade[1].nomeCidade);
-    } 
+    switch (opcao) {
+    case 1:
+        if(cidade[0].populacao == cidade[1].populacao) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].populacao, cidade[1].nomeCidade, cidade[1].populacao);
+            printf("Valores iguais tentem novamente!\n");
+        } else if(cidade[0].populacao > cidade[1].populacao) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].populacao, cidade[1].nomeCidade, cidade[1].populacao);
+            printf("Carta 1 Venceu");
+        } else {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].populacao, cidade[1].nomeCidade, cidade[1].populacao);
+            printf("Carta 2 Venceu");
+        }
+        break;
+    case 2:
+        if(cidade[0].area == cidade[1].area) {
+            printf("Atributo escolhido: Área \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].area, cidade[1].nomeCidade, cidade[1].area);
+            printf("Valores iguais tentem novamente!\n");
+        } else if(cidade[0].area > cidade[1].area) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].area, cidade[1].nomeCidade, cidade[1].area);
+            printf("Carta 1 Venceu");
+        } else {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].area, cidade[1].nomeCidade, cidade[1].area);
+            printf("Carta 2 Venceu");
+        }
+        break;
+    case 3:
+        if(cidade[0].pib == cidade[1].pib) {
+            printf("Atributo escolhido: PIB \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].pib, cidade[1].nomeCidade, cidade[1].pib);
+            printf("Valores iguais tentem novamente!\n");
+        } else if(cidade[0].pib > cidade[1].pib) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].pib, cidade[1].nomeCidade, cidade[1].pib);
+            printf("Carta 1 Venceu");
+        } else {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].pib, cidade[1].nomeCidade, cidade[1].pib);
+            printf("Carta 2 Venceu");
+        }
+        break;
+    case 4:
+        if(cidade[0].numeroPontosTuristicos == cidade[1].numeroPontosTuristicos) {
+            printf("Atributo escolhido: NumeroPontosTuristicos \n");
+            printf("%s : %d - %s : %d \n", cidade[0].nomeCidade, cidade[0].numeroPontosTuristicos, cidade[1].nomeCidade, cidade[1].numeroPontosTuristicos);
+            printf("Valores iguais tentem novamente!\n");
+        } else if(cidade[0].numeroPontosTuristicos > cidade[1].numeroPontosTuristicos) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %d - %s : %d \n", cidade[0].nomeCidade, cidade[0].numeroPontosTuristicos, cidade[1].nomeCidade, cidade[1].numeroPontosTuristicos);
+            printf("Carta 1 Venceu");
+        } else {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %d - %s : %d \n", cidade[0].nomeCidade, cidade[0].numeroPontosTuristicos, cidade[1].nomeCidade, cidade[1].numeroPontosTuristicos);
+            printf("Carta 2 Venceu");
+        }
+        break;
+    case 5:
+        if(cidade[0].densidadePopulacional == cidade[1].densidadePopulacional) {
+            printf("Atributo escolhido: DensidadePopulacional \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].densidadePopulacional, cidade[1].nomeCidade, cidade[1].densidadePopulacional);
+            printf("Valores iguais tentem novamente!\n");
+        } else if(cidade[0].densidadePopulacional < cidade[1].densidadePopulacional) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].densidadePopulacional, cidade[1].nomeCidade, cidade[1].densidadePopulacional);
+            printf("Carta 1 Venceu");
+        } else {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].densidadePopulacional, cidade[1].nomeCidade, cidade[1].densidadePopulacional);
+            printf("Carta 2 Venceu");
+        }
+        break;
+    case 6:
+        if(cidade[0].pibPerCapita == cidade[1].pibPerCapita) {
+            printf("Atributo escolhido: PibPerCapita \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].pibPerCapita, cidade[1].nomeCidade, cidade[1].pibPerCapita);
+            printf("Valores iguais tentem novamente!\n");
+        } else if(cidade[0].pibPerCapita > cidade[1].pibPerCapita) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].pibPerCapita, cidade[1].nomeCidade, cidade[1].pibPerCapita);
+            printf("Carta 1 Venceu");
+        } else {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].pibPerCapita, cidade[1].nomeCidade, cidade[1].pibPerCapita);
+            printf("Carta 2 Venceu");
+        }
+        break;
+    case 7:
+        if(cidade[0].superPoder == cidade[1].superPoder) {
+            printf("Atributo escolhido: SuperPoder \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].superPoder, cidade[1].nomeCidade, cidade[1].superPoder);
+            printf("Valores iguais tentem novamente!\n");
+        } else if(cidade[0].superPoder > cidade[1].superPoder) {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].superPoder, cidade[1].nomeCidade, cidade[1].superPoder);
+            printf("Carta 1 Venceu");
+        } else {
+            printf("Atributo escolhido: População \n");
+            printf("%s : %lf - %s : %lf \n", cidade[0].nomeCidade, cidade[0].superPoder, cidade[1].nomeCidade, cidade[1].superPoder);
+            printf("Carta 2 Venceu");
+        }
+        break;    
+    default:
+        printf("Essa opção não existe, tente novamente!");
+        break;
+    }
     
     return 0;
 }
